@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola mundo JS DOM</title>
+</head>
+<body>
+    <h1 id="message" >Hola mundo je je</h1>
+    <button id="my_button">Haceme clic</button>
+    
+    <script>
+        const titulo = document.getElementById('message');
+        const boton = document.getElementById('my_button');
+        
+        boton.addEventListener('click', ()=>{
+                titulo.textContent='El titulo se ha modificado con JS';
+                titulo.style.color='blue';
+                
+                // insertar un elemento nuevo
+                const nuevoParrafo = document.createElement('p');
+                nuevoParrafo.textContent='Parrafo creado por JS';
+                document.body.appendChild(nuevoParrafo);
+
+                boton.disabled=true;
+            });
+
+    </script>
+</body>
+</html>
