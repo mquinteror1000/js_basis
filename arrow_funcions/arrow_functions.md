@@ -44,4 +44,47 @@ arrow_funcions$ node boton_arrow.js
 Click en: Enviar
 ```
 Acá es como si callback hubiera ejecutado hacerClick() y guardado el valor que pasó la consola
+## Ejemplo de cuestionario
+se ejecuta en el navegador ( contexto global )
+objeto.js
+```javascript
+const objeto = {
+    nombre: 'mi Objeto',
+    saludarRegular: function (){
+        console.log(this.nombre); 
+    },
+    saludarArrow: () => {
+        console.log(this.nombre);
+    }
+};
+// este hay que usarlo en el navegador
+console.log('Vamos a probar las funciones');
+console.log('saludaRegular');
+objeto.saludarRegular();
+console.log('saludaArrow');
+objeto.saludarArrow(); 
+```
+Archivo html para probar el scrip en el navegador
+usa_objeto.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probando Arrow Functions</title>
+</head>
+<body>
+    <script src="objeto.js"></script>
+</body>
+</html>
+```
+Para probarlo
+```bash
+python3 -m http.server 8000
+```
+El resultado es
 
+![objeto_arrow](imgs/objeto_arrow.png)
+
+no me lo esperaba
