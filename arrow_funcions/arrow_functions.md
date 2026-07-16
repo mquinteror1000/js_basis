@@ -88,3 +88,23 @@ El resultado es
 ![objeto_arrow](imgs/objeto_arrow.png)
 
 no me lo esperaba
+## ejemplo temporizador, timeout
+temporizador.js
+```javascript
+class Temporizador {
+  constructor() {
+    this.segundos = 0;
+  }
+  iniciar() {
+    setTimeout(function() {
+      this.segundos++;
+      console.log(this.segundos);
+    }, 1000);
+  }
+}
+const temp = new Temporizador();
+temp.iniciar();
+```
+ejecucion
+![temporizador](./imgs/temporizador.png)
+sigue
