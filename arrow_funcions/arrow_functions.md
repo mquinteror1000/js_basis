@@ -1,6 +1,7 @@
 ## Arrow Functions
 <br>
 Carácterísticas
+
 - No requieren del uso de la palabra recervada **function**
 - Retorno explicito: Sí la función es de una sola línea se pueden omitir
     - Llaves: {}
